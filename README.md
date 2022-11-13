@@ -7,23 +7,23 @@ Tryout Sample spring boot and deploy in K8s(Minikube)
 * Write a [docker file](https://github.com/Senthuran100/SpringBoot-K8s/blob/main/Dockerfile)
 * Use the below command to build the docker file.
 
-`docker build -t k8s-springboot .
+    `docker build -t k8s-springboot .
 `
 * Then verify whether the image is created using the below command.
 
-`docker images`
+   `docker images`
 * Then push this to the dockerhub - This is an Optional step based on the image pull policy.
 
-`docker push senthurandocker/k8s-springboot:latest`
+  `docker push senthurandocker/k8s-springboot:latest`
 * Create a [deployment.yaml](https://github.com/Senthuran100/SpringBoot-K8s/blob/main/deployment.yaml) file and specify the deployment and service
 * Start the minikube.
 
-`minikube start`
+  `minikube start`
 * Then execute the below command to create the deployment.
 
-`kubectl apply -f deployment.yaml`
+  `kubectl apply -f deployment.yaml`
 * Then check whether the pods, deployment and services are created.
 
-`kubectl get all`
+  `kubectl get all`
 * Then test the spring boot application using the minikube address.
 
